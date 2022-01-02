@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon --inspect=9229 app.js",
+    "migrate": "node ./migrations/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "listener": "node rabbit-listener.js"
   },
@@ -19,6 +20,7 @@
     "joi": "^17.4.0",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.21",
+    "moment": "^2.29.1",
     "mongoose": "^5.12.9",
     "winston": "^3.3.3"
   },
