@@ -41,7 +41,7 @@ Parking lot system.
   - To get all the occupied slots
 
   #### `/api/parking/reserve-slot`
-  - To get all reserved slot
+  - To reserved a slot
   - Requires auth token
 
   #### `/api/parking/occupy-slot`
