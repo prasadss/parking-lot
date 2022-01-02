@@ -1,35 +1,55 @@
-# RabbitMQ-mailer
+# Parking-lot
 
-Node JS project with rabbit mq implementation
+Node JS project with express
 
-## Description
+# Description
 
-This project take msg from an endpoint and then pushed the data in rabbitmq. Rabbitmq is listned by the rabbit-listner.js file and responsbole to send emails.
+Parking lot system.
 
-Note - Once we send email using the endpoint in console a url will be displayed which can be used to review the email as we ae using nodemailer test server
-
-## Prerequisite
+# Prerequisite
 
 - Node
-- Docker
 
-## Installaton
+
+# Installaton
 
 - npm install
-- docker-compose up -d
+- Make changes in default.js for configuring mongodb username and password,
+- npm run migrate (Will create slots)
+- Import postman from the postman folder
 
-## Running
-
-- Open two consoles and run below command in each.
+# Running
+- Open console and run below command.
   #### `npm start`
-  #### `npm listener`
 
-## curl to send email
+## API descriptions
 
-`curl --location --request POST 'http://localhost:3000/api/mail/send-mail' \
---header 'Content-Type: application/x-www-form-urlencoded' \
---data-urlencode 'name=aaaa' \
---data-urlencode 'toEmail=aasd@gmail.com' \
---data-urlencode 'content=Hello' \
---data-urlencode 'fromEmail=prasd@gmail.com' \
---data-urlencode 'subject=test'`
+## User Routes
+
+  #### `/api/user/register`
+  - To create new Users
+
+  #### `/api/user/login`
+  - To login and get auth token.
+
+## Parking Routes
+
+  #### `/api/parking/slots`
+  - To get all the slots
+
+  #### `/api/parking/slots-occupied` 
+  - To get all the occupied slots
+
+  #### `/api/parking/reserve-slot`
+  - To get all reserved slot
+  - Requires auth token
+
+  #### `/api/parking/occupy-slot`
+  - To occupy booked slot
+  - Requires auth token
+
+  #### `/api/parking/free-slot`
+  - To free booked or reserved slot
+  - Requires auth token
+
+

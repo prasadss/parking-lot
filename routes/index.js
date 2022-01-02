@@ -1,7 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const mail = require("./user");
+const user = require("./user");
+const parking = require("./parking");
 
-router.use("/user", mail);
+router.use("/user", user);
+router.use("/parking", parking);
 
 module.exports = router;

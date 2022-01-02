@@ -1,0 +1,137 @@
+{
+  "info": {
+    "_postman_id": "cf0d17bd-a236-4eaf-a3b9-c531ee0b2d50",
+    "name": "Parking slot",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Register",
+      "id": "9e208c36-f6d5-4f38-96f2-7fc5eec0241e",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\":\"aaa\",\n    \"email\":\"aa@ab.com\",\n    \"password\":\"a\",\n    \"is_special\": true\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": "localhost:3000/api/user/register"
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "id": "a6e6b636-97fe-420e-b1ad-e12dee7d9d23",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\":\"aaa\",\n    \"password\":\"a\"\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": "localhost:3000/api/user/login"
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Parking Slots",
+      "id": "32404d52-bed0-4ef8-a6a0-6a00fda35446",
+      "protocolProfileBehavior": { "disableBodyPruning": true },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": "localhost:3000/api/parking/slots"
+      },
+      "response": []
+    },
+    {
+      "name": "Reserved Slot",
+      "id": "752be146-b308-46da-a698-11dbaf834ee6",
+      "protocolProfileBehavior": { "disableBodyPruning": true },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-auth-token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWQwNjQ5YzgwMjA4MjY0YzZkNTQ0YzEiLCJpc19zcGVjaWFsIjp0cnVlLCJpYXQiOjE2NDEwNDcyNTh9.vo0K1MF0RnCYUVvvNsAWsQL0XMpUQeDUySOsZkynb9E",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": "localhost:3000/api/parking/reserve-slot"
+      },
+      "response": []
+    },
+    {
+      "name": "Occupy Slot",
+      "id": "16196d4d-7deb-42ba-a579-a894a0350c28",
+      "protocolProfileBehavior": { "disableBodyPruning": true },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-auth-token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWQwNjQ5YzgwMjA4MjY0YzZkNTQ0YzEiLCJpc19zcGVjaWFsIjp0cnVlLCJpYXQiOjE2NDEwNDcyNTh9.vo0K1MF0RnCYUVvvNsAWsQL0XMpUQeDUySOsZkynb9E",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": "localhost:3000/api/parking/occupy-slot"
+      },
+      "response": []
+    },
+    {
+      "name": "Free slot",
+      "id": "2b1cb91e-2417-466f-ab2a-322836937647",
+      "protocolProfileBehavior": { "disableBodyPruning": true },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-auth-token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWQwNjQ5YzgwMjA4MjY0YzZkNTQ0YzEiLCJpc19zcGVjaWFsIjp0cnVlLCJpYXQiOjE2NDEwNDcyNTh9.vo0K1MF0RnCYUVvvNsAWsQL0XMpUQeDUySOsZkynb9E",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": "localhost:3000/api/parking/free-slot"
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Reserved Slots",
+      "id": "22dea053-c84e-4ff9-ae85-dd0cfa349195",
+      "protocolProfileBehavior": { "disableBodyPruning": true },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": "localhost:3000/api/parking/slots-occupied"
+      },
+      "response": []
+    }
+  ]
+}

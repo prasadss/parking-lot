@@ -4,6 +4,7 @@ function validateUser(user) {
     name: Joi.string().min(3).required(),
     email: Joi.string().email().required(),
     password: Joi.string().required(),
+    is_specia: Joi.boolean().required(),
   });
   return schema.validate(user);
 }

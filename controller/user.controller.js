@@ -17,6 +17,7 @@ async function registerUser(body) {
       name: body.name,
       email: body.email,
       password: password,
+      is_special: body.is_special,
     });
 
     const result = await user.save();
@@ -35,7 +36,6 @@ async function loginUser(body) {
     return {
       errorMessage: "Invalid Email or password",
     };
-console.log(user);
 
   const validpassword = await bcrypt.compare(body.password, user.password);
   if (!validpassword)

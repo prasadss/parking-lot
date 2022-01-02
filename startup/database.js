@@ -17,3 +17,4 @@ module.exports = function () {
     .then(() => winston.info(`connected to mongodb ${url}`))
     .catch((ex) => winston.error(`Failed to connect mongodb - ${ex}`));
 };
+  
